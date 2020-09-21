@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Form with Validation</title>
+</head>
+<body>
+    <form name="registration" onsubmit="return false">
+        <h1 class="title">Registration Form</h1>
+        <p id="alert" class="alert"></p>
+        <div class="form_row">
+            <label for="userid">User ID:</label>
+            <input id="userid" class="short_field" name="userid" type="text" />
+        </div>
+        <div class="form_row">
+            <label for="password">Password:</label>
+            <input id="password" class="short_field" name="password" type="text" />
+        </div>
+        <div class="form_row">
+            <label for="name">Name:</label>
+            <input id="name" class="long_field" name="name" type="text" />
+        </div>
+        <div class="form_row">
+            <label for="address">Address:</label>
+            <input id="address" class="long_field" name="address" type="text" />
+        </div>
+        <div class="form_row">
+            <label for="country">Country:</label>
+            <select id="country" name="country" selected="" class="long_field">
+                <option value="" selected disabled hidden>Select a Country</option>
+                <option value="AF">Australia</option>
+                <option value="AL">Canada</option>
+                <option value="DZ">India</option>
+                <option value="AS">Russia</option>
+                <option value="AD">USA</option>
+            </select>
+        </div>
+        <div class="form_row">
+            <label for="zip">Zip Code:</label>
+            <input id="zip" class="short_field" name="zip" type="text" />
+        </div>
+        <div class="form_row">
+            <label for="email">Email:</label>
+            <input id="email" class="long_field" name="email" type="text" />
+        </div>
+        <div class="form_row">
+            <label for="sex">Sex:</label>
+            <div id="sex" name="sex" selected="" class="radio">
+                <input id="male" name="sex" type="radio">male</input>
+                <input id="female" name="sex" type="radio">female</input>
+            </div>
+        </div>
+        <div class="form_row">
+            <label for="language">Language:</label>
+            <div id="language" name="language" class="checkbox">
+                <input name="language" type="checkbox" checked>English</input>
+                <input name="language" type="checkbox">Non-English</input>
+            </div>
+        </div>
+        <div class="form_row">
+            <label for="about">About:</label>
+            <input id="about" class="textbox" name="about" type="textbox" />
+        </div>
+        <div class="form_row">
+            <button id="submit" onclick=formValidation()>Submit</button>
+        </div>
+    </form>
+<script src="validation.js"></script>
+</body>
+</html>
